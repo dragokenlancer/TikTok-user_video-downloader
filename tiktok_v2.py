@@ -3,7 +3,7 @@ from tkinter.messagebox import *
 import requests, json, os
 from TikTokAPI import TikTokAPI
 import sys
-
+#start of CLI
 if len(sys.argv) > 1:
     user_name = str(sys.argv[1])
     if len(sys.argv) > 2:
@@ -29,8 +29,7 @@ if len(sys.argv) > 1:
         open(name, 'wb').write(r.content)
     print("Task completed")
 else:
-
-
+    #start of GUI
     def show_answer():
         blank.delete(0,"end")
         if uname.get() == "":
@@ -72,10 +71,7 @@ else:
         print("completed task")
         blank.insert(0, "completed task")
 
-
-
     main = Tk()
-    #main.geometry("400x100")
     Label(main, text = "username:").grid(row=0)
     Label(main, text = "amount:").grid(row=1)
     Label(main, text = "output").grid(row=2)
