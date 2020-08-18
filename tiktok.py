@@ -18,4 +18,3 @@ for i in range(c):
     r = requests.get(url, allow_redirects=True)
     name = '{}\{}-{}.mp4'.format(user_name, user_name, i)
     open(name, 'wb').write(r.content)
-
