@@ -34,4 +34,4 @@ jobs:
     - name: Test with pytest
       run: |
         python tiktok.py
-        #pytest tiktok_v2.py foryou 1 #need to make some changes for it to work in here
+        python tiktok_v2.py
