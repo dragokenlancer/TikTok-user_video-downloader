@@ -25,7 +25,7 @@ if len(sys.argv) > 1:
         print(out)
         url = var['items'][i]['video']['downloadAddr']
         r = requests.get(url, allow_redirects=True)
-        name = '{}\{}-{}.mp4'.format(user_name, user_name, i)
+        name = '{}\\{}-{}.mp4'.format(user_name, user_name, i)
         open(name, 'wb').write(r.content)
     print("Task completed")
 else:
@@ -60,7 +60,7 @@ else:
                 print(out)
                 url = var['items'][i]['video']['downloadAddr']
                 r = requests.get(url, allow_redirects=True)
-                name = '{}\{}-{}.mp4'.format(user_name, user_name, i)
+                name = '{}\\{}-{}.mp4'.format(user_name, user_name, i)
                 open(name, 'wb').write(r.content)
                 blank.insert(0, out)
         else: 
@@ -76,16 +76,13 @@ else:
     Label(main, text = "amount:").grid(row=1)
     Label(main, text = "output").grid(row=2)
 
-
     uname = Entry(main)
     amount = Entry(main)
     blank = Entry(main)
 
-
     uname.grid(row=0, column=1)
     amount.grid(row=1, column=1)
     blank.grid(row=2, column=1)
-
 
     Button(main, text='Quit', command=main.destroy).grid(row=4, column=0, sticky=W, pady=4)
     Button(main, text='Run', command=show_answer).grid(row=4, column=1, sticky=W, pady=4)
