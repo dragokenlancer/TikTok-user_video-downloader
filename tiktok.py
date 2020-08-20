@@ -1,8 +1,8 @@
 import requests, json, os
 from TikTokAPI import TikTokAPI
 
-user_name = 'tiktok_username'  # username without the @
-c = 50  # number of videos to download
+user_name = 'foryou'  # username without the @
+c = 1  # number of videos to download
 
 api = TikTokAPI()
 current_directory = os.getcwd()
