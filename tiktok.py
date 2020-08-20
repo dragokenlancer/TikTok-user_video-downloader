@@ -16,5 +16,5 @@ for i in range(c):
     print('{}-{}-{}'.format(i, var['items'][i]['id'], var['items'][i]['video']['downloadAddr']))
     url = var['items'][i]['video']['downloadAddr']
     r = requests.get(url, allow_redirects=True)
-    name = '{}\{}-{}.mp4'.format(user_name, user_name, i)
+    name = '{}\\{}-{}.mp4'.format(user_name, user_name, i)
     open(name, 'wb').write(r.content)
