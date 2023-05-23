@@ -1,3 +1,3 @@
-requests==2.24.0
+requests==2.31.0
 PyTikTokAPI==0.0.3
 #sudo apt-get install python3-tk
